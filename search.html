@@ -1,0 +1,30 @@
+<!--⑤検索結果ページの中身-->
+
+{% extends "base-search.html" %}
+{% block content %}
+
+
+
+<h1>駅どこ執事</h1>
+<p>仕事の最寄り駅が{{txt1}}で、{{txt2}}分以内に通勤したいあなたにおすすめの駅はこちらです</p>
+
+
+<div class="container">
+    <div class="image-container">
+        <img src="https://placehold.jp/320x240.png">
+    </div>
+<!-- foliumで作成した地図を表示 -->
+    <div class="map-container" id="map-container">
+        <div id="map" style="height: 400px;"></div>
+    </div>
+</div>
+
+<!-- foliumのJavaScriptを読み込む -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Flaskから受け取った地図データを表示
+    var map_html = `{{ map_html|safe }}`;
+    document.getElementById('map').innerHTML = map_html;
+</script>
+
+{% endblock %}

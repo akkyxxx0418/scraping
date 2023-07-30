@@ -1,0 +1,21 @@
+/*⑥検索結果ページのCSS*/
+
+
+.h1{
+    color: blueviolet;
+}
+
+.container {
+    display: flex; /* 横並びにするためのCSS */
+}
+
+.image-container,
+.map-container {
+    flex: 1; /* 横幅を均等に分割 */
+    padding: 10px; /* 適宜余白を調整 */
+}
+
+/* 地図のサイズを50%にする */
+.map-container {
+    width: 50%;
+}

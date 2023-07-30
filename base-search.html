@@ -1,0 +1,21 @@
+<!--④検索結果ページのベース-->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--自分のCSS読み込み-->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/search.css')}}">    
+      <!-- foliumのCSSとJavaScriptを読み込む -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+      <!--<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>-->
+    </head>
+ 
+<body>
+{% block content %}
+<!-- ここにメインコンテンツを書く -->
+{% endblock %}
+</body>
+</html>

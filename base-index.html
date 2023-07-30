@@ -1,0 +1,17 @@
+<!--①TOPページhtmlのベース-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>6-4 スクロールすると画面分割した右側が動く</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}">    
+    </head>
+<body>
+   {% block content %}
+   <!-- ここにメインコンテンツを書く -->
+   {% endblock %}
+</body>
+</html>

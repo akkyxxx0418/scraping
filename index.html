@@ -1,0 +1,64 @@
+<!--②TOPページhtmlの中身-->
+
+{% extends "base-index.html" %}
+{% block content %}
+
+<div id="wrapper">
+    <div id="fixed-area"><!--左固定エリア-->
+    <header>
+      <h1>駅どこ執事</h1>
+      <div class="search-corner">
+ 
+          <form action="/search" method="POST">
+            <p>仕事の最寄り駅を検索してください</p>
+            <input type="text" name="station_name">
+            <p>探索したい駅までの時間を入力してください</p>
+            <input type="text" name="minute">
+            <p><input type="submit" value="検索"></p>
+          </form>     
+    
+      </div>
+    </header>
+    <!--/fixed-area--></div>
+      
+    <div id="container"><!--右エリア-->
+
+        <div class="introduction">
+            <h1>安心して住める街をあなたに</h1>
+            <p>駅どこ執事は、あなたの「安らぎのある街探し」をお手伝いする駅周辺情報の検索サービスです。</p>
+        </div>
+
+        <section>
+        <h2>駅近くのカフェを表示</h2>
+        <div class="area">
+        <img src="/static/css/cafe.png" class="point">
+        <p>美味しいコーヒーで一息つきながら本を読んだり、調べ物をしたりしながらゆったりと過ごせる街を探します</p>
+        </div>
+      <!--/area1--></section>
+
+        <section>
+        <h2>駅近くの自然を検索</h2>
+        <div class="area">
+        <img src="/static/css/picnic.png" class="point">
+        <p>公園で散歩したり、体を動かしたり、家から出てリフレッシュする街を探します</p>
+        </div>
+      <!--/area2--></section>
+
+        <section>
+        <h2>やすらぎ度をから優先付け</h2>
+        <div class="area">
+        <img src="/static/css/temple.png" class="point">
+        <p>検索した駅のやすらぎ度を分析してあなたに最適な駅を優先づけして表示します</p>
+        </div>
+      <!--/area3--></section>
+
+      <footer><small>&copy; goen</small></footer>
+    <!--/container--></div>
+  <!--/wrapper--></div>
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+  <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/js/6-4.js"></script>
+  </body>
+
+{% endblock %}
